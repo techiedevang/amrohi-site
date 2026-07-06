@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 const images = [
-  '/images/amrohi_slide_1_1783343749964.png',
-  '/images/amrohi_slide_2_1783343760366.png',
-  '/images/amrohi_slide_3_1783343771974.png'
+  `${import.meta.env.BASE_URL}images/amrohi_slide_1_1783343749964.png`,
+  `${import.meta.env.BASE_URL}images/amrohi_slide_2_1783343760366.png`,
+  `${import.meta.env.BASE_URL}images/amrohi_slide_3_1783343771974.png`
 ];
 
 export default function HeroSlideshow() {

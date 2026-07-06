@@ -2,22 +2,22 @@ import React from 'react';
 
 const founders = [
   {
-    name: "Mehram Amrohi",
-    role: "Founder & Chairman",
-    image: "/images/founder_mehram_1783343838901.png",
-    description: "The visionary behind Amrohi Developers, with over 30 years of experience shaping Mumbai's skyline."
+    name: 'Mehram Amrohi',
+    role: 'Principal Architect & Founder',
+    image: `${import.meta.env.BASE_URL}images/founder_mehram_1783343838901.png`,
+    description: 'With over three decades of visionary design experience, Mehram established the studio on the principles of quiet luxury and structural integrity. His meticulous approach has redefined the architectural language of Mumbai\'s western suburbs, treating every project as a lasting legacy.'
   },
   {
-    name: "Iftekhar Amrohi",
-    role: "Co-Founder & Director",
-    image: "/images/founder_iftekhar_1783343810412.png",
-    description: "Master builder and structural expert, ensuring every project stands the test of time."
+    name: 'Iftekhar Amrohi',
+    role: 'Head of Development & Operations',
+    image: `${import.meta.env.BASE_URL}images/founder_iftekhar_1783343810412.png`,
+    description: 'Iftekhar drives the firm\'s strategic expansion and project execution. Merging a deep understanding of urban development with rigorous operational standards, he ensures that the studio\'s ambitious architectural concepts translate flawlessly into tangible, high-end realities.'
   },
   {
-    name: "Talib Amrohi",
-    role: "Director of Architecture",
-    image: "/images/founder_talib_1783343821336.png",
-    description: "Leading the next generation of design, bringing modern luxury aesthetics to heritage practices."
+    name: 'Talib Amrohi',
+    role: 'Director of Design & Innovation',
+    image: `${import.meta.env.BASE_URL}images/founder_talib_1783343821336.png`,
+    description: 'Talib brings a modern, avant-garde perspective to the studio. Leading the interior ateliers and facade engineering, his obsession with bespoke materials and micro-detailing injects a contemporary, world-class aesthetic into the firm\'s traditional craftsmanship.'
   }
 ];
 
