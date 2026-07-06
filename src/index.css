@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #15161a;
+  --color-ink-soft: #1d1f24;
+  --color-bone: #eee8db;
+  --color-bone-dim: #cfc8b8;
+  --color-brass: #a9854b;
+  --color-brass-light: #cba967;
+  --color-verdigris: #5c6b5d;
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.blueprint-grid {
+  background-image:
+    repeating-linear-gradient(0deg, rgba(238,232,219,0.14) 0px, rgba(238,232,219,0.14) 1px, transparent 1px, transparent 40px),
+    repeating-linear-gradient(90deg, rgba(238,232,219,0.14) 0px, rgba(238,232,219,0.14) 1px, transparent 1px, transparent 40px);
+  -webkit-mask-image: radial-gradient(ellipse at 65% 50%, black 40%, transparent 78%);
+  mask-image: radial-gradient(ellipse at 65% 50%, black 40%, transparent 78%);
+}
+
+.draw-line {
+  stroke: var(--color-brass-light);
+  stroke-width: 1.1;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: drawline 2.6s cubic-bezier(.65,.05,.36,1) forwards;
+}
+.draw-line.delay1 { animation-delay: .15s; }
+.draw-line.delay2 { animation-delay: .5s; }
+.draw-line.delay3 { animation-delay: .85s; }
+.draw-line.faint { stroke: var(--color-bone-dim); opacity: .55; }
+
+@keyframes drawline {
+  to { stroke-dashoffset: 0; }
+}
+
+.plan-label {
+  font-family: var(--font-body);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  fill: var(--color-bone-dim);
+  opacity: 0;
+  animation: fadein .8s ease forwards;
+  animation-delay: 2.2s;
+}
+@keyframes fadein { to { opacity: .6; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .draw-line, .plan-label {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+  }
+}
