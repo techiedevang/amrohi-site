@@ -28,8 +28,10 @@ const localBusinessSchema = {
 };
 
 export default function App() {
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/';
+
   return (
-    <BrowserRouter basename="/amrohi-site">
+    <BrowserRouter basename={basename}>
       <Seo 
         title="Home"
         description="Welcome to Amrohi Site."

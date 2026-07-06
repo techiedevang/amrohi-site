@@ -38,7 +38,7 @@ export default function About() {
             remains, deliberately, a boutique one. We commit to no more than four projects at a time so that every
             threshold, every shade of stone, gets our full attention.
           </p>
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {values.map((v) => (
               <div key={v.title}>
                 <h4 className="font-display text-lg mb-2">{v.title}</h4>

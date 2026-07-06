@@ -58,8 +58,12 @@ function BuildingGeometry() {
     }
   });
 
+  const { size } = useThree();
+  const isMobile = size.width < 768;
+  const scale = isMobile ? 0.75 : 1;
+
   return (
-    <group ref={ref}>
+    <group ref={ref} scale={scale}>
       <Points positions={positions} stride={3} frustumCulled={false}>
         <PointMaterial
           transparent

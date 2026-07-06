@@ -69,13 +69,11 @@ export default function Disciplines() {
         ))}
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
         {listed.map((item, i) => (
           <div
             key={item.index}
-            className={`border-t border-black/15 px-6 md:px-6 py-7 ${
-              i === 0 ? 'md:border-l-0' : 'md:border-l border-black/15'
-            } ${i % 2 === 1 ? 'border-l' : ''} ${i < 2 ? 'border-t-0 md:border-t' : ''}`}
+            className="border-t border-black/15 px-6 py-7 border-l-0 sm:even:border-l sm:odd:border-l-0 sm:border-black/15 md:border-l md:border-black/15 md:first:border-l-0"
           >
             <div className="font-display text-[13px] text-brass tracking-widest mb-3">{item.index}</div>
             <h4 className="font-display font-medium text-lg mb-2">{item.title}</h4>

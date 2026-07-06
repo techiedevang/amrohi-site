@@ -49,7 +49,7 @@ export default function HeroSlideshow() {
   };
 
   return (
-    <div className="relative w-full h-[350px] md:h-[80vh] flex items-center justify-center overflow-hidden" style={{ perspective: '1200px' }}>
+    <div className="relative w-full h-[500px] sm:h-[550px] md:h-[80vh] flex items-center justify-center overflow-hidden" style={{ perspective: '1200px' }}>
       
       {/* 3D Track */}
       <div className="relative w-[85%] md:w-[75%] h-[90%] flex items-center justify-center" style={{ transformStyle: 'preserve-3d' }}>
@@ -72,6 +72,12 @@ export default function HeroSlideshow() {
           );
         })}
       </div>
+
+      {/* Readability dark gradient overlay */}
+      <div 
+        className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/35 md:bg-gradient-to-r md:from-black/90 md:via-black/50 md:to-transparent pointer-events-none" 
+        style={{ zIndex: 35 }} 
+      />
       
       {/* Navigation Indicators */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 z-40">

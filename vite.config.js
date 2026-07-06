@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename)
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/amrohi-site/',
+  base: process.env.GITHUB_ACTIONS ? '/amrohi-site/' : '/',
   plugins: [
     react(),
     tailwindcss(),

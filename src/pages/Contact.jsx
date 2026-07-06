@@ -63,7 +63,7 @@ export default function Contact() {
                 <label className="block text-[11px] tracking-[0.14em] uppercase text-bone-dim mb-2">Your Name</label>
                 <input required type="text" className="w-full bg-transparent border-b border-white/20 focus:border-brass-light outline-none py-3 text-bone" />
               </div>
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-[11px] tracking-[0.14em] uppercase text-bone-dim mb-2">Phone</label>
                   <input required type="tel" className="w-full bg-transparent border-b border-white/20 focus:border-brass-light outline-none py-3 text-bone" />
